@@ -816,9 +816,9 @@ if (user) {
     document.getElementById('actionButton3').onclick = () => userLoggedIn ? window.location.href = 'go:Amount' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
     document.getElementById('actionButton4').onclick = () => userLoggedIn ? window.location.href = 'go:2.5%' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
     document.getElementById('actionButton5').onclick = () => userLoggedIn ? window.location.href = 'go:dispos' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
-    document.getElementById('actionButton6').onclick = () => userLoggedIn ? window.location.href = 'go:tax law-30' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
+    document.getElementById('actionButton6').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/law30.html' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
     document.getElementById('actionButton7').onclick = () => userLoggedIn ? window.location.href = 'go:tax-vat' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
-    document.getElementById('actionButton8').onclick = () => userLoggedIn ? window.location.href = 'go:tax law-6' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
+    document.getElementById('actionButton8').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/law6.html' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
     document.getElementById('actionButton9').onclick = () => userLoggedIn ? window.location.href = 'go:salary0' : (isPopupOpen ? null : window.location.href = 'go:Ramadan');
 
     // إخفاء أو إظهار الأيقونات والعناصر المحتوية على "PRO"
@@ -884,7 +884,7 @@ window.addEventListener('DOMContentLoaded', () => {
             // تعيين href إلى الرابط الآخر
             switch (i) {
                 case 1:
-                    visitButton.setAttribute('href', 'go:tax law-30');
+                    visitButton.setAttribute('href', 'https://taxlawapp.github.io/Tax-calculation/law30.html');
                     break;
                 case 2:
                     visitButton.setAttribute('href', 'go:tax-vat');
@@ -905,7 +905,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     visitButton.setAttribute('href', 'go:dispos');
                     break;
                 case 8:
-                    visitButton.setAttribute('href', 'go:tax law-6');
+                    visitButton.setAttribute('href', 'https://taxlawapp.github.io/Tax-calculation/law6.html');
                     break;
                 case 9:
                     visitButton.setAttribute('href', 'go:salary0');
@@ -1111,3 +1111,4 @@ document.onkeydown = function (e) {
 };
 
 </script>
+
