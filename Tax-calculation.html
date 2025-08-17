@@ -667,28 +667,28 @@ hr {
            <i class="fas fa-crown crown-icon"></i> <!-- أيقونة التاج -->          
            <img src="https://www2.0zz0.com/2025/03/08/22/361893013.png" alt="Icon 9">
            <p>توزيعات الأرباح | ق 91</p>
-           <button id="visitButton3" class="button" onclick="showPopup('go:Profit-tax', 'توزيعات الأرباح | ق 91')"><i class="fas fa-check-circle"></i> أدخل المعرف</button>
+           <button id="visitButton3" class="button" onclick="showPopup('https://taxlawapp.github.io/Tax-calculation/Profit91.html', 'توزيعات الأرباح | ق 91')"><i class="fas fa-check-circle"></i> أدخل المعرف</button>
        </a>
       
        <a href="#" id="actionButton2" class="icon-item" onclick="setActive(this)">
           <i class="fas fa-crown crown-icon"></i> <!-- أيقونة التاج -->          
           <img src="https://www2.0zz0.com/2025/03/09/14/491901426.png" alt="Icon 10">
           <p>الضريبة الإضافية | ق 67</p>
-          <button id="visitButton4" class="button" onclick="showPopup('go:tax0-vat', 'الضريبة الإضافية | ق 67')"><i class="fas fa-check-circle"></i> أدخل المعرف</button>
+          <button id="visitButton4" class="button" onclick="showPopup('https://taxlawapp.github.io/Tax-calculation/vat67+.html', 'الضريبة الإضافية | ق 67')"><i class="fas fa-check-circle"></i> أدخل المعرف</button>
        </a>
       
        <a href="#" id="actionButton3" class="icon-item" onclick="setActive(this)">
          <i class="fas fa-crown crown-icon"></i> <!-- أيقونة التاج -->         
          <img src="https://www2.0zz0.com/2025/03/09/14/912021098.png" alt="Icon 11">
          <p>مقابل التأخير | تجاري</p>
-         <button id="visitButton5" class="button" onclick="showPopup('go:Amount', 'مقابل التأخير | تجاري')"><i class="fas fa-check-circle"></i> أدخل المعرف</button>
+         <button id="visitButton5" class="button" onclick="showPopup('https://taxlawapp.github.io/Tax-calculation/Amount91+.html', 'مقابل التأخير | تجاري')"><i class="fas fa-check-circle"></i> أدخل المعرف</button>
       </a>
 
             <a href="#" id="actionButton9" class="icon-item" onclick="setActive(this)">
             <i class="fas fa-crown crown-icon"></i> <!-- أيقونة التاج -->
             <img src="https://www2.0zz0.com/2025/06/21/12/714360355.png" alt="Icon 12">
             <p>مقابل التأخير | مرتبات</p>
-            <button id="visitButton14" class="button" onclick="showPopup('go:salary0', 'مقابل التأخير | مرتبات')"><i class="fas fa-check-circle"></i> أدخل المعرف</button>
+            <button id="visitButton14" class="button" onclick="showPopup('https://taxlawapp.github.io/Tax-calculation/salary91+.html', 'مقابل التأخير | مرتبات')"><i class="fas fa-check-circle"></i> أدخل المعرف</button>
         <!-- التاج مع كلمة "جديد" -->
         <div class="crown">جديد</div>              
         </a>
@@ -822,15 +822,15 @@ if (user) {
     // تحديث الروابط بناءً على حالة تسجيل الدخول
     const userLoggedIn = daysDiff > 0;
 
-    document.getElementById('actionButton1').onclick = () => userLoggedIn ? window.location.href = 'go:Profit-tax' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
-    document.getElementById('actionButton2').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/vat67.html' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
-    document.getElementById('actionButton3').onclick = () => userLoggedIn ? window.location.href = 'go:Amount' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
+    document.getElementById('actionButton1').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/Profit91.html' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
+    document.getElementById('actionButton2').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/vat67+.html' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
+    document.getElementById('actionButton3').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/Amount91+.html' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
     document.getElementById('actionButton4').onclick = () => userLoggedIn ? window.location.href = 'go:2.5%' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
     document.getElementById('actionButton5').onclick = () => userLoggedIn ? window.location.href = 'go:dispos' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
     document.getElementById('actionButton6').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/law30.html' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
-    document.getElementById('actionButton7').onclick = () => userLoggedIn ? window.location.href = 'go:tax-vat' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
+    document.getElementById('actionButton7').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/vat67+.html' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
     document.getElementById('actionButton8').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/law6.html' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
-    document.getElementById('actionButton9').onclick = () => userLoggedIn ? window.location.href = 'go:salary0' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
+    document.getElementById('actionButton9').onclick = () => userLoggedIn ? window.location.href = 'https://taxlawapp.github.io/Tax-calculation/salary91+.html' : (isPopupOpen ? null : window.location.href = 'https://taxlawapp.github.io/home/pro.html');
 
     // إخفاء أو إظهار الأيقونات والعناصر المحتوية على "PRO"
     const icons = document.querySelectorAll('.fa-crown');
@@ -901,13 +901,13 @@ window.addEventListener('DOMContentLoaded', () => {
                     visitButton.setAttribute('href', 'https://taxlawapp.github.io/Tax-calculation/vat67.html');
                     break;
                 case 3:
-                    visitButton.setAttribute('href', 'go:Profit-tax');
+                    visitButton.setAttribute('href', 'https://taxlawapp.github.io/Tax-calculation/Profit91.html');
                     break;
                 case 4:
-                    visitButton.setAttribute('href', 'go:tax0-vat');
+                    visitButton.setAttribute('href', 'https://taxlawapp.github.io/Tax-calculation/vat67+.html');
                     break;
                 case 5:
-                    visitButton.setAttribute('href', 'go:Amount');
+                    visitButton.setAttribute('href', 'https://taxlawapp.github.io/Tax-calculation/Amount91+.html');
                     break;
                 case 6:
                     visitButton.setAttribute('href', 'go:2.5%');
@@ -919,7 +919,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     visitButton.setAttribute('href', 'https://taxlawapp.github.io/Tax-calculation/law6.html');
                     break;
                 case 9:
-                    visitButton.setAttribute('href', 'go:salary0');
+                    visitButton.setAttribute('href', 'https://taxlawapp.github.io/Tax-calculation/salary91+.html');
                     break;                
             }
         } else {
@@ -1122,6 +1122,7 @@ document.onkeydown = function (e) {
 };
 
 </script>
+
 
 
 
