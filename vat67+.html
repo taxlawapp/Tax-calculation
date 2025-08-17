@@ -1,0 +1,2957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- مكتبة الأيقونات -->
+<!-- رابط خط Cairo من Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@400;700&display=swap" rel="stylesheet"> 
+  
+  
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/i18n/jquery-ui-i18n.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hijri-date/dist/umd/hijri-date.min.js"></script>  
+  
+  
+<title>فروق ضريبة القيمة المضافة</title>
+          <!-- لو الأيقونة بصيغة PNG -->
+    <link rel="icon" type="image/png" href="https://www3.0zz0.com/2024/05/30/07/482205963.png">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Beiruti' , sans-serif;
+    }
+  
+    body{
+        font-family: 'Beiruti', sans-serif;            
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 5rem;
+        background: linear-gradient(to right, white, #e1f5fe);      
+        user-select: none;
+
+      
+    }
+            
+    .form{
+    margin: 0px auto;          
+    border-radius: 0px;
+    position: relative;
+    padding: 20px 20px 20px;
+    background: linear-gradient(to right, white, #e1f5fe);      
+    border-radius: 0px;
+    text-align: center;
+    box-shadow: 50%;
+    animation: rotate 1.5s linear infinite;
+    border-style: none;
+    border: 0px solid #420c0c;
+      
+    }
+
+
+
+    .form h2{
+    background: linear-gradient(to right, #eaecee, #e1f5fe);/* خلفية متدرجة */
+    color: #2b0876;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-size: 25px;
+    border: 2px solid #420c0c;
+    border-radius: 0px;
+    margin-top: 40px; /* إضافة المسافة السفلية */
+      
+    }
+    .form .input{
+        text-align: center;
+        margin-top: 5px;
+        font-weight: 900;
+
+    }
+
+
+
+    .form .input .inputbox{
+        
+        margin-top: 5px;
+    }
+
+    .form .input .inputbox label:not(.settings-label,.toggle-all-label){
+    background: ; 
+    margin-top: 0px;      
+    display: block;
+    color: #02076e;
+    margin-bottom: 2.5px;
+    font-size: 22px;
+    border: 0px solid #420c0c;
+    margin-top: 2px;      
+
+    }
+
+    .form .input .inputbox input:not(.settings-checkbox){
+    text-align: center;
+    font-weight: 900;
+    width: 100%;
+    background: #ffffff;
+    outline: none;
+    border-radius: 60px;
+    padding: 6px 20px;
+    font-size: 20px;
+    color: #0e1ba0;
+    height: 45px;
+    border: 2px solid #420c0c;
+    border-radius: 5px;            
+    margin:1.5px 0; 
+    margin-top: 0px;      
+
+    }
+      
+.form .input .inputbox input:focus{
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.50);
+}
+      
+      
+    .form-control {
+    width: 100%;
+    height: 45px;
+    border: 2px solid #420c0c; 
+    border-radius: 0px;
+    padding: 0 10px;
+    font-size: 18px;
+    font-family: 'Beiruti' , sans-serif;
+    color: #fff;
+    text-align: center;
+  
+}      
+
+    .forget{
+        margin-top: 5px;
+        color: #555;
+    }
+
+    .forget a{
+        color: #ff0047;
+    }
+
+     
+#textbox31 {
+    margin-top: 2.5px;
+    font-size: 20px;
+    font-weight: bold;  
+    background-color: #1a237e;
+    color: #FFFF00;
+    border-radius: 0px;
+    width: 100%;
+    height: 30px;
+  
+} 
+      
+
+
+.button {
+    font-size: 17px; /* حجم الخط */
+    font-weight: bold; /* وزن الخط */
+    padding: 7.5px 75px; /* حجم الحشو */
+    margin: 10px auto; /* تقليل هامش الزر */
+    border: none; /* حذف الحدود */
+    border-radius: 5px; /* تقويس الزوايا */
+    background: linear-gradient(135deg, #0277bd, #1a237e); /* خلفية متدرجة */
+    color: white; /* لون النص */
+    cursor: pointer; /* تحويل المؤشر إلى يد عند التحويم */
+    transition: background-color 0.3s, transform 0.3s; /* تأثير الانتقال */
+    text-decoration: none; /* إزالة الخط تحت النص داخل الزر */
+    display: block; /* عرض الزر ككتلة */
+    text-align: center; /* توسيط النص داخل الزر */
+}
+
+.button:hover {
+    background-color: #1a237e; /* لون خلفية الزر عند التحويم */
+    color: #FFFF00; /* لون النص */  
+    transform: scale(1.05); /* تحجيم الزر عند التحويم */
+    border: 2px solid white; /* إضافة حد عند التحويم */
+  
+}
+
+.button:active {
+    transform: scale(0.95); /* تحجيم الزر عند الضغط */
+}
+
+.button a {
+    text-decoration: none; /* إزالة الخط تحت النص داخل الرابط */
+    color: inherit; /* الاحتفاظ بلون النص داخل الرابط */
+}      
+
+      
+#button5 {
+    color: white; /* لون النص */
+    background: red; /* لون الخلفية */
+    border: none; /* إزالة الحدود */
+    border-radius: 5px; /* زوايا مستديرة */
+    text-decoration: none; /* إزالة التسطير عن النص */
+    display: block; /* عرض الزر ككتلة */
+    font-size: 17px; /* حجم الخط */
+    font-weight: bold; /* وزن الخط */
+    padding: 7.5px 75px; /* حجم الحشو */
+    margin: 5px auto; /* هامش الزر */
+    margin-bottom: 60px;
+    cursor: pointer; /* تحويل المؤشر إلى يد عند التحويم */
+    transition: background-color 0.3s, transform 0.3s; /* تأثير الانتقال */
+    text-align: center; /* توسيط النص داخل الزر */
+}
+  
+#button5:hover {
+    background-color: darkred; /* تغيير لون الخلفية عند التحويم */
+    transform: scale(1.05); /* تحجيم الزر عند التحويم */
+  
+      } 
+      
+
+        /* استايل النص العائم */
+        .floating-text {
+            font-size: 18px;
+            font-weight: bold;
+            position: fixed;
+            bottom: 27.5px;
+            right: 60px; /* تعديل المسافة بين النص والأيقونة */
+            background-color: #ffffff;
+            color: red;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none; /* الإخفاء الافتراضي للنص */
+            margin-bottom: 50px; /* مسافة سفلية */          
+        }
+      
+      
+        /* أنماط القائمة السفلية */
+        .navbar {
+            position: fixed;
+            bottom: 3px;
+            left: 50%; /* توسيط العنصر أفقيًا */
+            transform: translateX(-50%); /* توسيط العنصر بدقة */
+            width: 92.5%; /* عرض العنصر */
+            background: linear-gradient(135deg, #0277bd, #1a237e); /* خلفية متدرجة */
+            display: flex;
+            justify-content: space-around; /* توزيع العناصر */
+            padding: 5px 15px; /* حشو داخلي */
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+            border-radius: 22.5px; /* زوايا مستديرة */
+            border-bottom: 3px solid white; /* حدود */
+            z-Index:1;
+        }
+
+        .navbar .nav-item {
+            flex: 1;
+            text-align: center;
+            color: white; /* لون النص */
+            font-size: 14px; /* حجم النص */
+            cursor: pointer; /* تغيير شكل المؤشر */
+            padding: 5px 0; /* حشو داخلي */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* تأثيرات الانتقال */
+            border-width: 1px; /* حدود */
+            border-style: solid;
+            border-color: transparent;
+        }
+
+        .icon {
+            margin-bottom: 2px; /* مسافة سفلية للأيقونة */
+            font-size: 20px; /* حجم الأيقونة */
+        }
+
+        .nav-item span {
+            display: block;
+            font-size: 15px; /* حجم النص */
+            font-weight: bold; /* وزن النص */
+            text-decoration: none; /* إزالة التسطير */
+        }
+
+        .nav-item span:active {
+            font-size: 20px; /* حجم النص */
+            font-weight: bold; /* وزن النص */ 
+        }
+
+        .nav-item:active .icon {
+          font-size: 22px; /* حجم الأيقونة */
+        }  
+     
+        /* أنماط شعار الإشعارات */
+        .notification-badge {
+            position: absolute;
+            top: -5px; /* المسافة من الأعلى */
+            right: 87.5px; /* المسافة من اليمين */
+            background-color: red; /* لون الخلفية */
+            color: white; /* لون النص */
+            font-size: 15px; /* حجم النص */
+            padding: 2.5px 5px; /* حشو داخلي */
+            border-radius: 50%; /* زوايا مستديرة */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }   
+      
+        /* أنماط الوضع الليلي للقائمة */
+        body.dark-mode .navbar {
+            background: #121212; /* لون خلفية القائمة في الوضع الليلي */
+            border-top: 2px solid #fafafa; /* حدود علوية */
+        }
+
+        body.dark-mode .navbar .nav-item {
+            color: #ddd; /* لون النص في الوضع الليلي */
+            border-color: transparent; /* حدود شفافة */
+        }
+
+        body.dark-mode .navbar .nav-item.home {
+            border-color: #ddd; /* حدود العنصر الرئيسي */
+            border: none; /* إزالة الحدود */  
+        }
+      
+        body.dark-mode .icon {
+            color: #ddd; /* لون الأيقونات في الوضع الليلي */
+        }
+
+        /* إزالة الخط تحت أسماء القوائم */
+        .navbar-nav .nav-link {
+            text-decoration: none;
+        }
+        .navbar a {
+            text-decoration: none;
+        }
+     
+ 
+        .result {
+            background-color: #e7f3ff;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 2.5px solid #1a237e; /* إضافة حد */ 
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons .calculate {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .buttons .clear {
+            background-color: #f44336;
+            color: white;
+        }  
+  
+        p {
+            color: #1a237e;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+  
+p1 {
+    background-color: #2E4577; /* Set background color */
+    border-radius: 5px; /* Rounded corners */
+    color: #FFFF00; /* Text color */
+    text-align: center; /* Center-align text */
+    margin-bottom: 10px; /* Margin at the bottom */
+    font-weight: bold; /* Bold text */
+    font-size: 20px; /* Font size */
+    width: 100%; /* Full width of the parent container */
+    max-width: 1000px; /* Maximum width */
+    padding: 10px; /* Padding inside the element */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: block; /* Ensure element behaves like a block-level element */
+}
+  
+
+p2 {
+    background-color: red; /* Set background color */
+    border-radius: 5px; /* Rounded corners */
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    margin-bottom: 10px; /* Margin at the bottom */
+    font-weight: bold; /* Bold text */
+    font-size: 20px; /* Font size */
+    width: 100%; /* Full width of the parent container */
+    max-width: 1000px; /* Maximum width */
+    padding: 10px; /* Padding inside the element */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: block; /* Ensure element behaves like a block-level element */
+}  
+  
+#error {
+    color: #d9534f; /* لون النص */
+    background-color: #f2dede; /* خلفية النص */
+    border: 1px solid #ebccd1; /* حدود النص */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#error i {
+    margin-right: 10px; /* مسافة بين الأيقونة والنص */
+    font-size: 20px; /* حجم الأيقونة */
+}
+ 
+  
+hr {
+    border: none; /* إزالة الحدود الافتراضية */
+    border-top: 2.5px solid red; /* تغيير سمك ولون الخط العلوي */
+    margin: 10px 0; /* إضافة هوامش فوق وتحت */
+    margin-bottom: 10px;  
+}      
+
+      
+/* تخصيص استايل التقويم */
+.ui-datepicker {
+    width: 300px; /* عرض التقويم */
+    border: 2px solid #ccc; /* حدود التقويم */
+    border-radius: 5px; /* زوايا التقويم مستديرة */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل للتقويم */
+    font-family: Arial, sans-serif; /* خط التقويم */
+}
+
+.ui-datepicker-header {
+    background-color: #e1f5fe; /* لون خلفية الرأس */
+    border-bottom: 1px solid #0056b3; /* حدود أسفل الرأس */
+    color: #fff; /* لون النص في الرأس */
+    font-size: 16px; /* حجم خط النص في الرأس */
+    text-align: center; /* محاذاة النص إلى الوسط */
+    padding: 10px 0; /* مسافة داخل الرأس */
+    border-top-left-radius: 5px; /* زاوية علوية يسارية مستديرة */
+    border-top-right-radius: 5px; /* زاوية علوية يمينية مستديرة */
+}
+
+.ui-datepicker-title {
+    font-weight: bold; /* جعل النص عريض */
+    color: #02076e; /* لون النص للشهور */
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+    color: #fff; /* لون الأسهم */
+    font-size: 16px; /* حجم خط الأسهم */
+    cursor: pointer; /* إظهار المؤشر كيد عند التفاعل */
+    padding: 0 10px; /* مسافة داخلية حول الأسهم */
+}
+
+.ui-datepicker-prev:hover, .ui-datepicker-next:hover {
+    color: #d1ecff; /* لون الأسهم عند التفاعل */
+}
+
+.ui-datepicker-calendar {
+    border-collapse: collapse; /* إزالة المسافات بين الخلايا */
+    width: 100%; /* عرض التقويم بالكامل */
+}
+
+.ui-datepicker-calendar th {
+    background-color: #f0f0f0; /* لون خلفية أيام الأسبوع */
+    border: 1px solid #ccc; /* حدود أيام الأسبوع */
+    color: #333; /* لون النص لأيام الأسبوع */
+    font-weight: normal; /* وزن الخط العادي */
+    font-size: 16px; /* حجم الخط */
+    padding: 5px; /* مسافة داخلية لأيام الأسبوع */
+}
+
+.ui-datepicker-calendar td {
+    border: 1px solid #ccc; /* حدود الأيام */
+    padding: 5px; /* مسافة داخلية للأيام */
+    text-align: center; /* محاذاة النص إلى الوسط */
+    font-size: 16px; /* حجم الخط */
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    background-color: #fff; /* لون خلفية الأيام */
+    color: #333; /* لون النص للأيام */
+    text-decoration: none; /* إزالة التسطير تحت النص */
+    border-radius: 50%; /* جعل الأيام دوائر */
+    width: 30px; /* عرض الدائرة */
+    height: 30px; /* ارتفاع الدائرة */
+    line-height: 30px; /* ارتفاع الخط داخل الدائرة */
+    display: inline-block; /* عرض كتلة داخلية لتحديد الخط في المنتصف */
+    transition: background-color 0.3s, color 0.3s; /* تأثير التدرج اللوني */
+    box-sizing: border-box; /* لضمان أن الدائرة تحوي الرقم في المنتصف بشكل صحيح */
+    border: 1px solid transparent; /* إضافة حدود شفافة لتمكين الانتقال */
+}
+
+.ui-datepicker-calendar .ui-state-default:hover {
+    background-color: #007bff; /* لون الخلفية عند التفاعل */
+    color: #fff; /* لون النص عند التفاعل */
+    border-color: #007bff; /* تغير لون الحدود عند التفاعل */
+}
+
+.ui-datepicker-today .ui-state-default {
+    border: 1px solid #007bff; /* حدود اليوم الحالي */
+    background-color: #eaf5ff; /* لون خلفية اليوم الحالي */
+    color: #333; /* لون النص لليوم الحالي */
+}
+
+.ui-datepicker-week-end .ui-state-default {
+    color: #c00; /* لون النص لعطلة نهاية الأسبوع */
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+    color: #999; /* لون النص للأيام غير القابلة للاختيار */
+    cursor: not-allowed; /* تغيير المؤشر للأيام غير القابلة للاختيار */
+}
+      
+/* تخصيص مظهر قائمة الشهر */
+    .ui-datepicker-month {
+        background-color: #0d47a1;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        color: white;
+    }
+
+    /* تخصيص مظهر قائمة السنة */
+    .ui-datepicker-year {
+        background-color: #0d47a1;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        color: white;
+    }
+
+    /* تخصيص مظهر القوائم المنسدلة بشكل عام */
+    .ui-datepicker select.ui-datepicker-month, 
+    .ui-datepicker select.ui-datepicker-year {
+        width: 50%;
+        font-size: 20px;
+    }
+      
+        /* الخلفية الشفافة */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1; 
+            display: none; 
+        }
+        /* نافذة الإدخال */
+        #visitPrompt {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(to right, white, #e1f5fe);      
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 2; 
+            width: 300px;
+            border: 3px solid #1a237e;
+        }
+        h2 {
+            color: #1a237e;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 8px; 
+            font-weight: bold;
+            border-bottom: 3px solid red;
+        }
+        p {
+            color: #333;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 5px; 
+            font-weight: bold;
+        }      
+        input[type="text"] {
+            padding: 10px;
+            width: 100%; 
+            font-size: 20px;
+            margin-bottom: 7.5px; 
+            text-align: center;
+            color: #2b0876;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.50);
+        }      
+        button {
+            padding: 10px;
+            text-align: center; 
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 5px; 
+            cursor: pointer;
+            width: 100%; 
+            border: none;
+            border-radius: 5px; 
+        }
+        .btn-check {
+            background-color: #4CAF50; 
+            color: white;
+        }
+        .btn-paste {
+            background-color: #2196F3; 
+            color: white;
+        }
+        .btn-clear {
+            background-color: #f44336; 
+            color: white;
+        }
+        .btn-free-access {
+            background-color: #ffa500;
+            color: white;
+            padding: 10px;
+            text-align: center; 
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 5px; 
+            cursor: pointer;
+            width: 100%; 
+            border: none;
+            border-radius: 5px;
+        }
+        .disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
+        button i {
+            margin-left: 5px; 
+        }
+        /* تنسيق الرسائل */
+        #message {
+            margin-top: 10px; 
+            color: red; 
+            text-align: center; 
+            font-weight: bold;
+            font-size: 16px;
+        }
+        /* تنسيق رابط الواتساب */
+        .whatsapp-link {
+            color: blue; 
+            text-decoration: underline; 
+            cursor: pointer; 
+            font-size: 20px; 
+            font-weight: bold; 
+        }
+      
+     #usernameDisplay {
+    color: #FFFF00; /* لون النص */
+    font-weight: bold; /* وزن الخط */
+    font-size: 17px;  
+    background-color: #0277BD; /* خلفية النص */
+    border: 0px solid #ebccd1; /* حدود النص */
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #1a237e; /* إضافة حد */
+    margin-bottom: 5px;   
+      }
+      
+      
+        /* أنماط الشريط العلوي */
+        .top-bar {
+            position: fixed;
+            top: 0px; /* المسافة من الأعلى */
+            left: 50%; /* توسيط العنصر أفقيًا */
+            transform: translateX(-50%); /* توسيط العنصر بدقة */
+            width: 100%; /* عرض العنصر */
+            height: 57.5px; /* ارتفاع العنصر */
+            background: linear-gradient(135deg, #0277bd, #1a237e); /* خلفية متدرجة */
+            display: flex;
+            justify-content: space-between; /* توزيع العناصر */
+            padding: 10px 15px; /* حشو داخلي */
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+            border-radius: 0px 0px 22.5px 22.5px; /* زوايا مستديرة */
+            border-bottom: 3px solid white; /* حدود */
+            align-items: center; /* توسيط العناصر عموديًا */
+            z-index: 1; /* ترتيب العنصر */
+            color: white; /* لون النص */
+        }
+
+
+.top-bar .menu-icon {
+    font-size: 27.5px;
+    cursor: pointer;
+}
+
+.top-bar .title {
+    font-size: 20px; /* حجم الخط لعناصر العنوان */
+    margin-left: 20px; /* مسافة بين السهم والعنوان */
+    flex-grow: 1; /* يسمح للعناصر الأخرى بالتقلص عندما تكون الشاشة صغيرة */
+    text-align: center; /* توسيط العنوان */
+    font-weight: bold;  
+
+}
+
+.top-bar .icon {
+    display: none; /* إخفاء الأيقونات بعد التعديل */
+}
+      
+      
+      
+      
+        /* تنسيق النافذة المنبثقة */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            background: white;
+            padding: 25px 30px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 10002;
+            max-width: 85%;
+            width: fit-content;
+            min-width: 260px;
+            max-width: 320px;
+            text-align: center;
+            border-top: 5px solid;
+        }
+
+        .popup.show {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* تنسيق الأيقونة */
+        .popup-icon {
+            font-size: 26px;
+            margin-bottom: 2.5px;
+            transition: all 0.3s;
+        }
+
+        /* تنسيق الرسالة */
+        .popup-message {
+            font-size: 20px;
+            line-height: 1.0;
+            font-weight: bold; 
+            color: #333;
+        }
+
+        /* ألوان وأنواع الرسائل */
+        .popup.info {
+            border-color: #4285f4;
+            background: linear-gradient(145deg, #f7faff, #e8f1fe);
+        }
+        .popup.warning {
+            border-color: #fbbc05;
+            background: linear-gradient(145deg, #fff9e6, #fff2cc);
+        }
+        .popup.error {
+            border-color: #ea4335;
+            background: linear-gradient(145deg, #ffefed, #ffe5e3);
+        }
+        .popup.success {
+            border-color: #34a853;
+            background: linear-gradient(145deg, #f0f9f2, #e6f5e9);
+        }
+
+        /* ألوان الأيقونات */
+        .info .popup-icon { color: #4285f4; }
+        .warning .popup-icon { color: #fbbc05; }
+        .error .popup-icon { color: #ea4335; }
+        .success .popup-icon { color: #34a853; }
+
+        /* تأثيرات الحركة */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .popup.show .popup-icon {
+            animation: float 2s ease-in-out infinite;
+        }
+
+        /* طبقة التعتيم */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s;
+            backdrop-filter: blur(3px);
+            pointer-events: none;
+        }
+        .popup-overlay.show {
+            opacity: 1;
+            display: block;
+            pointer-events: auto;
+        }
+
+        .settings-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 10001;
+            width: 90%;
+            max-width: 400px;
+            display: none;
+            animation: fadeInUp 0.3s ease-out;
+            border: 5px solid #ddd;
+        }
+
+        .settings-popup.show {
+            display: block;
+        }
+
+        .settings-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .settings-header h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #1a237e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: bold;
+        }
+
+        .settings-content {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .settings-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px 12px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .settings-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .settings-label i {
+            font-size: 18px;
+            width: 22px;
+            text-align: center;
+        }
+
+        .settings-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .settings-checkbox {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 26px;
+            height: 26px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .settings-checkbox:checked {
+            background-color: #0277bd;
+            border-color: #0277bd;
+        }
+
+        .settings-checkbox:checked::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+        }
+
+        .toggle-all {
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-all-label {
+            font-weight: bold;
+            color: #1a237e;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .settings-footer {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .settings-footer a {
+            flex: 1;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            max-width: none;
+        }
+
+        /* ألوان خاصة بكل نوع من الرسائل */
+        .info { 
+            color: #0277bd; 
+            border-left-color: #0277bd;
+            background: #e3f2fd;
+        }
+        .success { 
+            color: #2e7d32; 
+            border-left-color: #2e7d32;
+            background: #e8f5e9;
+        }
+        .warning { 
+            color: #ff8f00; 
+            border-left-color: #ff8f00;
+            background: #fff8e1;
+        }
+        .error { 
+            color: #c62828; 
+            border-left-color: #c62828;
+            background: #ffebee;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -55%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate(-50%, -60%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+
+        /* تحسينات للشاشات الصغيرة */
+        @media (max-width: 400px) {
+            .settings-popup {
+                padding: 15px;
+            }
+            
+            .settings-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .settings-controls {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .settings-select {
+                width: 100%;
+            }
+        }
+
+        #durationInfo {
+            background-color: #1565c0;
+            color: #fff;
+            font-weight: 900;
+            text-align: center;
+            width: 100%;
+            outline: none;
+            border-radius: 60px;
+            padding: 6px 20px;
+            font-size: 18px;
+            height: 45px;
+            border: 0px solid #420c0c;
+            border-radius: 5px;            
+            margin:1.5px 0; 
+            margin-top: 0px;      
+        } 
+              
+        #durationInfo:focus{
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.50);
+        }
+              
+        #durationSuccess {
+            background-color: #1565c0;
+            color: #fff;
+            font-weight: 900;
+            text-align: center;
+            width: 100%;
+            outline: none;
+            border-radius: 60px;
+            padding: 6px 20px;
+            font-size: 18px;
+            height: 45px;
+            border: 0px solid #420c0c;
+            border-radius: 5px;            
+            margin:1.5px 0; 
+            margin-top: 0px;      
+        } 
+              
+        #durationSuccess:focus{
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.50);
+        }
+              
+        #durationWarning {
+            background-color: #1565c0;
+            color: #fff;
+            font-weight: 900;
+            text-align: center;
+            width: 100%;
+            outline: none;
+            border-radius: 60px;
+            padding: 6px 20px;
+            font-size: 18px;
+            height: 45px;
+            border: 0px solid #420c0c;
+            border-radius: 5px;            
+            margin:1.5px 0; 
+            margin-top: 0px;      
+        } 
+              
+        #durationWarning:focus{
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.50);
+        }
+              
+        #durationError {
+            background-color: #1565c0;
+            color: #fff;
+            font-weight: 900;
+            text-align: center;
+            width: 100%;
+            outline: none;
+            border-radius: 60px;
+            padding: 6px 20px;
+            font-size: 18px;
+            height: 45px;
+            border: 0px solid #420c0c;
+            border-radius: 5px;            
+            margin:1.5px 0; 
+            margin-top: 0px;      
+        } 
+              
+        #durationError:focus{
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.50);
+        }
+      
+      
+        :root {
+            --transition: all 0.3s ease;
+        }
+        
+        /* زر العائمة الرئيسي */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .floating-btn {
+            bottom: 42.5px;
+            right: -20px;
+            width: 47.5px;
+            height: 47.5px;
+            background: linear-gradient(135deg, #0277bd, #1a237e); /* خلفية متدرجة */
+            color: white;
+            border-radius: 50%;
+            display: ;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .floating-btn i {
+            font-size: 28px;
+            transition: var(--transition);
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .floating-btn.active {
+            transform: rotate(135deg);
+            background: linear-gradient(135deg, #f72585, #b5179e);
+        }
+        
+        /* تأثير النبض */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(67, 97, 238, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* القائمة المنبثقة */
+        .floating-menu {
+            position: absolute;
+            bottom: 95px;
+            right: -12.5px;
+            width: 230px;
+            background: linear-gradient(to right, white, #e1f5fe);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+            padding: 15px;
+            z-index: 1000;
+            border: 3px solid #ddd; /* حدود */
+        }
+        
+        .floating-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+      
+        /* إضافة هذا لمنع التمرير عند ظهور القائمة */
+       .body-no-scroll {
+         overflow: hidden;
+         position: fixed;
+         width: 100%;
+         height: 100%;
+        }   
+      
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }      
+        
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;          
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2.5px solid #eee;
+        }
+        
+        .menu-header h3 {
+            color: #2b2d42;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 12px;
+            left: -87.5px;
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 0;
+            line-height: 1;
+        }
+        
+        .close-btn:hover {
+            color: #f72585;
+            transform: rotate(90deg);
+        }
+        
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu-item {
+            padding: 10px 8px;
+            margin: 2.5px 0;
+            border-radius: 8px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .menu-item:hover {
+            background-color: rgba(67, 97, 238, 0.1);
+            transform: translateX(-5px);
+        }
+        
+        .menu-item i {
+            width: 25px;
+            height: 25px;
+            background: linear-gradient(135deg, #4895ef, #4361ee);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        
+        .menu-item.gold i {
+            background: linear-gradient(135deg, #ffb700, #ffd700);
+        }
+        
+        .menu-item a {
+            color: #2b2d42;
+            text-decoration: none;
+            font-weight: 500;
+            flex-grow: 1;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .menu-item .badge {
+            background-color: #f72585;
+            color: white;
+            border-radius: 10px;
+            padding: 2px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 2.5px;
+        }
+        
+        .gold-badge {
+            background: gold;
+            color: white;
+            border-radius: 10px;
+            padding: 2px 8px;
+            font-size: 12px;
+            margin-right: 1.5px;
+            font-weight: bold;
+        }
+        
+        /* تأثيرات دخول العناصر */
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .menu-item {
+            animation: slideIn 0.3s forwards;
+            opacity: 0;
+        }
+        
+        .menu-item:nth-child(1) { animation-delay: 0.1s; }
+        .menu-item:nth-child(2) { animation-delay: 0.2s; }
+        .menu-item:nth-child(3) { animation-delay: 0.3s; }
+        .menu-item:nth-child(4) { animation-delay: 0.4s; }
+        .menu-item:nth-child(5) { animation-delay: 0.5s; }
+        .menu-item:nth-child(6) { animation-delay: 0.6s; }
+        .menu-item:nth-child(7) { animation-delay: 0.7s; }
+        .menu-item:nth-child(8) { animation-delay: 0.8s; }      
+
+      
+      
+    .color-palette {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12.5px;
+        background: #f5f5f5;
+        border-radius: 8px;
+        margin-left: 0px;
+        max-width: 385px;
+      margin-top: 2.5px;
+      margin-bottom: 2.5px;
+      border: 2.5px solid #212121;
+    }
+         
+       .highlighted {
+            background-color: var(--tax-highlight-color);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+      
+    .color-option {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.2s ease;
+    }
+    
+    .color-option:hover {
+        border-color: #333;
+        transform: scale(1.1);
+    }
+    
+    .color-option.selected {
+        border-color: #333;
+        transform: scale(1.2);
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    
+    #textbox8.highlighted, 
+    #textbox6.highlighted, 
+    #textbox4.highlighted {
+        background-color: var(--tax-highlight-color, #FFFF99);
+        transition: background-color 0.3s ease;
+    } 
+      
+      
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.85); /* خلفية أكثر عتامة */
+            z-index: 9999; /* أعلى قيمة لضمان ظهوره فوق كل شيء */
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px); /* تأثير ضبابي للخلفية */
+        }
+        
+        .modal-content {
+            width: 90%;
+            max-width: 900px;
+            background-color: transparent; /* خلفية شفافة */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+            position: relative;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* نسبة 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }  
+      
+    </style>
+    <body onload="checkStoredVisitID()">
+      
+<div class="top-bar">
+    <div class="menu-icon" id="menuIcon" onclick="toggleSidebar()">
+        <i class="fas fa-arrow-right" onclick="window.location.href='https://taxlawapp.github.io/Tax-calculation/Tax-calculation.html'"></i> <!-- سهم العودة -->
+    </div>
+    <div class="title">
+        حساب الضريبة الإضافية ق 67 لسنة 2016
+    </div>
+</div>
+
+<!-- القائمة السفلية -->
+<div class="navbar">
+    <a href="https://taxlawapp.github.io/home/Login.html" class="nav-item">
+        <i class="fas fa-user icon"></i>
+        <span>حسابي</span>
+    </a>
+    <a href="https://taxlawapp.github.io/home/pro.html" class="nav-item">
+        <i class="fas fa-crown icon" style="color: gold;"></i>
+        <span>برو</span>
+    </a>     
+    <a href="https://taxlawapp.github.io/home/home.html" class="nav-item home">
+        <i class="fas fa-home icon"></i>
+        <span>الرئيسية</span>
+    </a>
+    <a href="https://youtube.com/@taxlawapp" class="nav-item">
+        <i class="fab fa-youtube icon"></i>
+        <span>قناتي</span>
+    </a>
+    <a href="https://taxlawapp.github.io/home/Settings.html" class="nav-item">
+        <i class="fas fa-ellipsis-h icon"></i>
+        <span>المزيد</span>
+    </a>      
+</div>
+
+      
+    <span style="display:none;" id="usernameDisplay"></span> <!-- عرض اسم المستخدم هنا -->     
+      
+    <!-- الخلفية الشفافة -->
+    <div id="overlay"></div>
+
+    <!-- نافذة إدخال معرف الزيارة -->
+    <div id="visitPrompt">
+        <h2>حساب الضريبة الإضافية ( فروق فحص ضريبة القيمة المضافة ) القانون 67 لسنة 2016 وتعديلاته</h2>
+        <p>يرجي إدخال معرف إستخدام الشاشة :</p>
+        <input type="text" id="visitIDInput" placeholder="أدخل معرف الزيارة الخاص بك">
+        <button class="btn-free-access" id="freeAccessBtn" onclick="firstFreeAccess()"> مجاناً <i class="fas fa-user"></i></button>      
+        <button class="btn-check" onclick="checkVisitID()"> التحقق <i class="fas fa-check"></i></button>
+        <button class="btn-paste" onclick="pasteVisitID()"> لصق <i class="fas fa-paste"></i></button>
+        <button class="btn-clear" onclick="clearVisitID()"> إفراغ <i class="fas fa-trash-alt"></i></button>
+        <div id="message"></div> <!-- ديف لعرض الرسائل -->
+        <div id="contactMessage" style="text-align: center; margin-top: 10px;"></div>
+    </div>
+
+    <!-- محتوى الصفحة المخفي -->
+    <div id="pageContent" style="display: none;">
+
+
+        <div class="form outer">
+
+            <h2>حساب الضريبة الإضافية ( فروق فحص ضريبة القيمة المضافة ) القانون 67 لسنة 2016 وتعديلاته</h2>
+
+          
+            <div class="input">
+              
+                    <div class="row inputbox">
+                    <div class="col-md-6">
+                                      <label id="textbox31">١ ) البيانات الأساسية</label>              
+          
+<div class="date-picker">
+          
+            <div class="input">
+    
+                                  
+                         <div class="row inputbox">
+                    <div class="col-md-6">
+        <label for="name">الفترة الضريبية :</label>
+        <input class="dete" type="" id="tax-period" readonly onclick="showPopup-('tax-period')" placeholder="أدخل الفترة الضريبية">                      
+                    </div>              
+                      
+                                                                            
+                         <div class="row inputbox">
+                    <div class="col-md-6">
+        <label for="name">المبلغ :</label>
+        <input class="form-control" type="number" id="amount" placeholder="أدخل المبلغ هنا">                      
+                    </div> 
+
+                           
+                           
+                         <div class="row inputbox">
+                    <div class="col-md-6">
+        <label for="name">تاريخ الإخطار من المأمورية :</label>
+        <input class="dete" type="" id="notice-date" readonly onclick="showPopup-('notice-date')" placeholder="أدخل تاريخ الإخطار من المأمورية">                      
+                    </div>  
+                           
+                           
+                         <div class="row inputbox">
+                    <div class="col-md-6">
+        <label for="name">تاريخ السداد :</label>
+        <input class="dete" type="" id="payment-date" readonly onclick="showPopup-('payment-date')" placeholder="أدخل تاريخ السداد هنا">                      
+                    </div> 
+                             
+  
+    <a  onclick="calculateFine()" class="button"><i class="fas fa-check-circle"></i> إحسب فروق الفحص</a> <!-- زر تنفيذي مع أيقونة تحقق -->
+                           
+        <div style="display: none;" class="result" id="result"></div>
+        <div style="display: none;" class="error" id="error"></div>
+                           
+    <a  onclick="clearFields()" class="button" id="button5"><i class="fas fa-times-circle"></i> إفراغ البيانات</a>   
+
+
+      </div></div></div></div></div></div></div></div></div>
+
+                 
+    <!-- الخلفية المعتمة -->
+    <div class="overlay" id="overlay"></div>                 
+                      
+    <!-- زر الفعل العائم والقائمة -->
+    <div class="floating-container">
+        <div class="floating-menu" id="floatingMenu">
+            <div class="menu-header">
+            <h3>روابط هامة للمستخدم :</h3>
+                <button class="close-btn" id="closeMenu">❌</button>    
+            </div>
+            <ul class="menu-items">
+                <li class="menu-item" onclick="openSettings()" style="cursor: pointer;">
+                  <i class="fas fa-cog"></i>
+                  <a>الإعدادات الخاصة بالشاشة</a>
+                </li>
+               <li class="menu-item" onclick="openVideoPopup()" style="cursor: pointer;">
+                  <i class="fas fa-lightbulb"></i>
+                  <a>فيديو إستخدام الشاشة</a>
+                </li>              
+               <li class="menu-item">
+                  <i class="fas fa-lightbulb"></i>
+                  <a href="https://taxlawapp.github.io/home/ideas.html">تقديم الإقتراحات للتطوير</a>
+                </li>
+              <li class="menu-item">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <a href="https://taxlawapp.github.io/home/problems.html">الإبلاغ الأخطاء المكتشفة</a>
+                </li>              
+                <li class="menu-item">
+                    <i class="fas fa-share-alt"></i>
+                    <a href="https://taxlawapp.github.io/home/Share-app.html">شارك التطبيق لأصدقائك</a>
+                </li>
+                <li class="menu-item">
+                    <i class="fas fa-star-half-alt"></i>
+                    <a href="https://play.google.com/store/apps/details?id=com.mrizk.taxlawapp">تقييم التطبيق عـ المتجر</a>
+                </li>
+            </ul>
+        </div>
+        
+        <button class="floating-btn pulse" id="mainButton">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+  
+<!-- النص العائم -->
+<div class="floating-text" id="floatingText">
+    إضغط هنا لعرض المزايا والإعدادات 
+</div>                       
+
+    <!-- نافذة الفيديو المنبثقة -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideoPopup()"></span>
+            <div class="video-container">
+                <iframe id="youtubeVideo" src="" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>                      
+                      
+                      
+    <!-- طبقة التعتيم -->
+    <div id="popupOverlay" class="popup-overlay"></div>
+    
+    <!-- النافذة المنبثقة -->
+    <div id="customPopup" class="popup">
+        <div class="popup-icon" id="popupIcon"></div>
+        <div class="popup-message" id="popupMessage"></div>
+    </div>                      
+                      
+<!-- زر فتح الإعدادات -->
+    <div id="customPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-icon" id="popupIcon"></div>
+            <div class="popup-message" id="popupMessage"></div>
+        </div>
+    </div>
+
+    <div id="popupSettings" class="settings-popup">
+        <div class="settings-header">
+            <h3><i class="fas fa-sliders-h"></i> إعدادات شاشة | الضريبة الإضافية ق 67</h3>
+        </div>
+        
+        <div class="settings-content">
+          
+<div class="toggle-all">
+  <input type="checkbox" class="settings-checkbox" id="autoSetTodayDate" onchange="handleTodayDateToggle()" checked>
+  <label class="toggle-all-label">
+    <i class="fas fa-calendar-day"></i>
+    <span>تفعيل تاريخ السداد اليوم تلقائيًا</span>
+  </label>
+</div> 
+          
+<!-- زر تمييز حقول احتساب الضريبة -->
+<div class="toggle-all">
+    <input type="checkbox" class="settings-checkbox" id="highlightTaxFieldsEnabled" onchange="handleHighlightTaxFieldsToggle()" checked>
+    <label class="toggle-all-label">
+        <i class="fas fa-highlighter"></i>
+        <span>تمييز لون حقول إحتساب الضريبة</span>
+    </label>
+</div>
+          
+    <!-- ألوان التمييز (مخفية بشكل افتراضي) -->
+    <div class="color-palette" id="taxFieldsColorPalette" style="display: none; margin-top: 10px;">
+        <div class="color-option" data-color="#FFFF99" style="background-color: #FFFF99;" onclick="selectTaxHighlightColor(this)" title="أصفر فاتح"></div>      
+        <div class="color-option" data-color="#E0FFFF" style="background-color: #E0FFFF;" onclick="selectTaxHighlightColor(this)" title="سماوي فاتح"></div>
+        <div class="color-option" data-color="#FFCC99" style="background-color: #FFCC99;" onclick="selectTaxHighlightColor(this)" title="برتقالي فاتح"></div>
+        <div class="color-option" data-color="#99CCFF" style="background-color: #99CCFF;" onclick="selectTaxHighlightColor(this)" title="أزرق فاتح"></div>
+        <div class="color-option" data-color="#99FF99" style="background-color: #99FF99;" onclick="selectTaxHighlightColor(this)" title="أخضر فاتح"></div>
+        <div class="color-option" data-color="#FF99FF" style="background-color: #FF99FF;" onclick="selectTaxHighlightColor(this)" title="وردي فاتح"></div>
+        <div class="color-option" data-color="#CC99FF" style="background-color: #CC99FF;" onclick="selectTaxHighlightColor(this)" title="بنفسجي فاتح"></div>
+        <div class="color-option" data-color="#FF9999" style="background-color: #FF9999;" onclick="selectTaxHighlightColor(this)" title="أحمر فاتح"></div>      
+    </div>          
+          
+            <div class="toggle-all">
+                <input type="checkbox" class="settings-checkbox" id="popupEnabled" onchange="toggleAllMessages()">
+                <label class="toggle-all-label">
+                    <i class="fas fa-bell"></i>
+                    <span>تفعيل إختفاء جميع الرسائل التنبهية</span>
+                </label>
+            </div>
+          
+            <div class="toggle-all">
+            <input type="checkbox" class="settings-checkbox" id="resetAllDurations" onchange="resetAllDurations()">
+                <label class="toggle-all-label">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>ضبط إختفاء جميع الرسائل التنبهية</span>
+                </label>
+            </div>          
+          
+            
+
+          
+            <div class="settings-item">
+                <label class="settings-label">
+                    <i class="fas fa-info-circle info"></i>
+                    <span>التحكم فـ ظهور / ومدة إختفاء رسائل المعلومات (Info) :</span>
+                </label>
+                <div class="settings-controls">
+                    <select class="settings-select" id="durationInfo">
+                        <option value="1000" selected>1 ثانية</option> <!-- ✅ الافتراضي -->
+                        <option value="2500">2.5 ثانية</option>
+                        <option value="5000">5 ثواني</option>
+                        <option value="10000">10 ثواني</option>
+                        <option value="15000">15 ثانية</option>
+                        <option value="30000">30 ثانية</option>
+                    </select>
+                    <input type="checkbox" class="settings-checkbox" id="enableInfo" onchange="updateSettings('info')">
+                </div>
+            </div>
+
+            <div class="settings-item">
+                <label class="settings-label">
+                    <i class="fas fa-check-circle success"></i>
+                    <span>التحكم فـ ظهور / ومدة إختفاء رسائل النجاح (Success) :</span>
+                </label>
+                <div class="settings-controls">
+                    <select class="settings-select" id="durationSuccess">
+                        <option value="1000" selected>1 ثانية</option> <!-- ✅ الافتراضي -->
+                        <option value="2500">2.5 ثانية</option>
+                        <option value="5000">5 ثواني</option>
+                        <option value="10000">10 ثواني</option>
+                        <option value="15000">15 ثانية</option>
+                        <option value="30000">30 ثانية</option>
+                    </select>
+                    <input type="checkbox" class="settings-checkbox" id="enableSuccess" onchange="updateSettings('success')">
+                </div>
+            </div>
+
+            <div class="settings-item">
+                <label class="settings-label">
+                    <i class="fas fa-exclamation-triangle warning"></i>
+                    <span>التحكم فـ ظهور / ومدة إختفاء رسائل التحذير (Warning) :</span>
+                </label>
+                <div class="settings-controls">
+                    <select class="settings-select" id="durationWarning">
+                        <option value="1000" selected>1 ثانية</option> <!-- ✅ الافتراضي -->           
+                        <option value="2500">2.5 ثانية</option>
+                        <option value="5000">5 ثواني</option>
+                        <option value="10000">10 ثواني</option>
+                        <option value="15000">15 ثانية</option>
+                        <option value="30000">30 ثانية</option>
+                    </select>
+                    <input type="checkbox" class="settings-checkbox" id="enableWarning" onchange="updateSettings('warning')">
+                </div>
+            </div>
+
+            <div class="settings-item">
+                <label class="settings-label">
+                    <i class="fas fa-times-circle error"></i>
+                    <span>التحكم فـ ظهور / ومدة إختفاء رسائل الخطأ (Error) :</span>
+                </label>
+                <div class="settings-controls">
+                    <select class="settings-select" id="durationError">
+                        <option value="1000" selected>1 ثانية</option> <!-- ✅ الافتراضي -->
+                        <option value="2500">2.5 ثانية</option>
+                        <option value="5000">5 ثواني</option>
+                        <option value="10000">10 ثواني</option>
+                        <option value="15000">15 ثانية</option>
+                        <option value="30000">30 ثانية</option>
+                    </select>
+                    <input type="checkbox" class="settings-checkbox" id="enableError" onchange="updateSettings('error')">
+                </div>
+            </div>
+
+
+  
+        </div>
+
+        <div class="settings-footer">
+            <a onclick="saveSettings()" class="button"><i class="fas fa-save"></i> حفظ</a>
+            <a onclick="closeSettings()" class="button" style="background: linear-gradient(135deg, #e53935, #c62828);"><i class="fas fa-times"></i> إغلاق</a>
+        </div>
+    </div>
+</div>
+
+    <script>  
+// دالة لتعيين تاريخ اليوم في حقل endDate
+function setTodayDateForEndDate() {
+    const today = new Date();
+    const formattedDate = 
+        String(today.getDate()).padStart(2, '0') + '/' + 
+        String(today.getMonth() + 1).padStart(2, '0') + '/' + 
+        today.getFullYear();
+
+    const paymentdateInput = document.getElementById('payment-date');
+    if (paymentdateInput) {
+        paymentdateInput.value = formattedDate;
+    }
+}
+
+function handleTodayDateToggle() {
+    const dateCheckbox = document.getElementById('autoSetTodayDate');
+    const isChecked = dateCheckbox.checked;
+
+    if (isChecked) {
+        localStorage.setItem('autoSetTodayDate', 'true');
+        setTodayDateForEndDate();
+        showMessage("تم تعيين تاريخ اليوم تلقائيًا لتاريخ مقابل التأخير", 'info', 1000, true);
+    } else {
+        localStorage.setItem('autoSetTodayDate', 'false');
+        const endDateInput = document.getElementById('endDate');
+        if (endDateInput) endDateInput.value = '';
+        showMessage("تم تعطيل التعيين التلقائي لتاريخ مقابل التأخير", 'success', 1000, true);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedDateSetting = localStorage.getItem('autoSetTodayDate');
+    const dateCheckbox = document.getElementById('autoSetTodayDate');
+
+    if (dateCheckbox) {
+        dateCheckbox.checked = savedDateSetting === 'true';
+
+        // مستمع التغيير
+        dateCheckbox.addEventListener('change', handleTodayDateToggle);
+
+        if (dateCheckbox.checked) {
+            setTodayDateForEndDate();
+        }
+    }
+});
+      
+      
+// اعدادات الاختفاء الاساسية 
+function resetAllDurations(suppressMessage = false) {
+    const resetCheckbox = document.getElementById('resetAllDurations');
+    const durationSelects = [
+        document.getElementById('durationInfo'),
+        document.getElementById('durationSuccess'),
+        document.getElementById('durationWarning'),
+        document.getElementById('durationError')
+    ];
+
+    if (resetCheckbox.checked) {
+        // ضبط جميع المدد إلى 1 ثانية (الخيار الأول) وإقفالها
+        durationSelects.forEach(select => {
+            if (select) {
+                select.selectedIndex = 0;
+                select.disabled = true;
+            }
+        });
+        
+        // حفظ الحالة في التخزين المحلي
+        localStorage.setItem('resetAllDurations', 'true');
+        
+        // عرض الرسالة فقط إذا لم يتم كتمها
+        if (!suppressMessage) {
+            showPopup('تم ضبط اعدادات إختفاء الرسائل بعد 1 ثانية تلقائي', 'success', 1000, true);
+        }
+    } else {
+        // إعادة فتح جميع المدد
+        durationSelects.forEach(select => {
+            if (select) select.disabled = false;
+        });
+        
+        // حذف الحالة من التخزين المحلي
+        localStorage.removeItem('resetAllDurations');
+        
+        // عرض الرسالة فقط إذا لم يتم كتمها
+        if (!suppressMessage) {
+            showPopup('تم إلغاء الإختفاء الإفتراضي يمكنك ضبط كل رسالة علي حدة', 'info', 1000, true);
+        }
+    }
+}
+
+// تهيئة العنصر عند تحميل الصفحة (بدون عرض الرسالة)
+function initializeResetCheckbox() {
+    const resetCheckbox = document.getElementById('resetAllDurations');
+    if (localStorage.getItem('resetAllDurations') === 'true') {
+        resetCheckbox.checked = true;
+        resetAllDurations(true); // نمرر true لكتم الرسالة
+    }
+}
+
+// استدعاء الدالة عند تحميل الصفحة
+window.addEventListener('DOMContentLoaded', initializeResetCheckbox);
+      
+// دالة عرض الرسائل المنبثقة
+function showPopup(message, type = 'info') {
+    // إنشاء العناصر إذا لم تكن موجودة
+    if (!document.getElementById('popupOverlay')) {
+        createPopupElements();
+    }
+
+    const popup = document.getElementById('customPopup');
+    const overlay = document.getElementById('popupOverlay');
+    const icon = document.getElementById('popupIcon');
+    const msg = document.getElementById('popupMessage');
+
+    // تعيين محتوى الرسالة
+    msg.textContent = message;
+
+    // تعيين النوع والمظهر
+    popup.className = `popup ${type}`;
+
+    // تعيين الأيقونة المناسبة
+    const icons = {
+        'info': 'fas fa-info-circle',
+        'success': 'fas fa-check-circle',
+        'warning': 'fas fa-exclamation-triangle',
+        'error': 'fas fa-times-circle'
+    };
+    icon.className = `popup-icon ${icons[type] || icons['info']}`;
+
+    // عرض الرسالة
+    popup.classList.add('show');
+    overlay.classList.add('show');
+
+    // إخفاء تلقائي بعد 1 ثانية
+    setTimeout(hidePopup, 1000);
+}
+
+// دالة إخفاء الرسالة المنبثقة
+function hidePopup() {
+    const popup = document.getElementById('customPopup');
+    const overlay = document.getElementById('popupOverlay');
+    
+    if (popup) popup.classList.remove('show');
+    if (overlay) overlay.classList.remove('show');
+}      
+      
+
+      
+// إعدادات تلوين حقول احتساب الضريبة      
+const taxFieldsIds = ['firstPeriodFine', 'secondPeriodFine'];
+
+// عند تحميل الصفحة، تحميل التفضيلات من التخزين المحلي
+document.addEventListener('DOMContentLoaded', function () {
+    loadTaxHighlightSettings();
+});
+
+// تبديل تمييز الحقول
+function handleHighlightTaxFieldsToggle() {
+    const checkbox = document.getElementById('highlightTaxFieldsEnabled');
+    const colorPalette = document.getElementById('taxFieldsColorPalette');
+
+    if (checkbox.checked) {
+        colorPalette.style.display = 'flex';
+
+        // تطبيق اللون المحفوظ إذا كان موجوداً
+        const savedColor = localStorage.getItem('taxHighlightColor');
+        if (savedColor) {
+            applyHighlightColor(savedColor);
+            selectColorOption(savedColor);
+        } else {
+            // لون افتراضي إذا لم يكن هناك لون محفوظ
+            applyHighlightColor('#e7f3ff');
+            selectColorOption('#e7f3ff');
+        }
+    } else {
+        colorPalette.style.display = 'none';
+        removeHighlightFromFields();
+        localStorage.removeItem('taxHighlightColor'); // إزالة اللون من التخزين
+    }
+
+    // حفظ الحالة في التخزين المحلي
+    localStorage.setItem('taxHighlightEnabled', checkbox.checked);
+}
+
+// اختيار لون التمييز
+function selectTaxHighlightColor(element) {
+    const color = element.getAttribute('data-color');
+    applyHighlightColor(color);
+    selectColorOption(color);
+
+    // حفظ اللون المختار في التخزين المحلي
+    localStorage.setItem('taxHighlightColor', color);
+}
+
+// تطبيق لون التمييز على الحقول
+function applyHighlightColor(color) {
+    taxFieldsIds.forEach(id => {
+        const field = document.getElementById(id);
+        if (field) {
+            field.style.backgroundColor = color; // تغيير مباشر للون
+            field.classList.add('highlighted');
+        }
+    });
+}
+
+// إزالة التمييز من الحقول
+function removeHighlightFromFields() {
+    taxFieldsIds.forEach(id => {
+        const field = document.getElementById(id);
+        if (field) {
+            field.classList.remove('highlighted');
+            field.style.backgroundColor = '#e7f3ff'; // إعادة اللون الافتراضي
+        }
+    });
+}
+
+// تحديد خيار اللون في لوحة الألوان
+function selectColorOption(color) {
+    const colorOptions = document.querySelectorAll('.color-option');
+    colorOptions.forEach(option => {
+        if (option.getAttribute('data-color') === color) {
+            option.classList.add('selected');
+        } else {
+            option.classList.remove('selected');
+        }
+    });
+}
+
+// تحميل إعدادات التمييز من التخزين المحلي
+function loadTaxHighlightSettings() {
+    const savedState = localStorage.getItem('taxHighlightEnabled');
+    const checkbox = document.getElementById('highlightTaxFieldsEnabled');
+    const colorPalette = document.getElementById('taxFieldsColorPalette');
+
+    if (savedState !== null) {
+        checkbox.checked = savedState === 'true';
+
+        if (checkbox.checked) {
+            colorPalette.style.display = 'flex';
+
+            const savedColor = localStorage.getItem('taxHighlightColor');
+            if (savedColor) {
+                applyHighlightColor(savedColor);
+                selectColorOption(savedColor);
+            } else {
+                applyHighlightColor('#e7f3ff'); // اللون الافتراضي
+                selectColorOption('#e7f3ff');
+            }
+        } else {
+            colorPalette.style.display = 'none';
+            removeHighlightFromFields();
+        }
+    } else {
+        // الحالة الافتراضية عند عدم وجود إعدادات محفوظة
+        checkbox.checked = true;
+        colorPalette.style.display = 'flex';
+        applyHighlightColor('#e7f3ff');
+        selectColorOption('#e7f3ff');
+    }
+}
+
+      
+
+      
+// دالة عرض الفيديو المنبثق       
+        function openVideoPopup() {
+            const modal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('youtubeVideo');
+            
+            // تعيين رابط فيديو يوتيوب
+            videoFrame.src = "https://www.youtube.com/embed/mp4EbhifHDQ?autoplay=1";
+            
+            modal.style.display = "flex";
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            
+            // منع التمرير عند فتح النافذة
+            document.body.style.overflow = 'hidden';
+           closeFloatingMenu();
+        }
+        
+        function closeVideoPopup() {
+            const modal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('youtubeVideo');
+            
+            modal.classList.remove('active');
+            setTimeout(() => {
+                videoFrame.src = "";
+                modal.style.display = "none";
+            }, 300);
+            
+            // إعادة التمرير عند الإغلاق
+            document.body.style.overflow = 'auto';
+        }
+        
+        // إغلاق النافذة عند النقر خارجها
+        window.onclick = function(event) {
+            const modal = document.getElementById('videoModal');
+            if (event.target == modal) {
+                closeVideoPopup();
+            }
+        }
+        
+        // إغلاق النافذة عند الضغط على زر ESC
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.keyCode == 27) {
+                closeVideoPopup();
+            }
+        };  
+      
+
+      
+        // دالة عرض الرسالة
+        function showPopup(message, type = 'info') {
+            const popup = document.getElementById('customPopup');
+            const overlay = document.getElementById('popupOverlay');
+            const icon = document.getElementById('popupIcon');
+            const msg = document.getElementById('popupMessage');
+            
+            // تعيين الرسالة
+            msg.textContent = message;
+            
+            // تعيين النوع والمظهر
+            popup.className = 'popup ' + type;
+            
+            // تعيين الأيقونة المناسبة
+            const icons = {
+                'info': 'fas fa-info-circle',
+                'warning': 'fas fa-exclamation-triangle',
+                'error': 'fas fa-times-circle',
+                'success': 'fas fa-check-circle'
+            };
+            icon.className = 'popup-icon ' + (icons[type] || icons['info']);
+            
+            // عرض الرسالة
+            popup.classList.add('show');
+            overlay.classList.add('show');
+            
+            // إخفاء تلقائي بعد 1 ثانية
+            setTimeout(hidePopup, 1000);
+        }
+        
+        // دالة إخفاء الرسالة
+        function hidePopup() {
+            document.getElementById('customPopup').classList.remove('show');
+            document.getElementById('popupOverlay').classList.remove('show');
+        }
+        
+            // مثال للاستخدام
+            /*
+            أنواع الرسائل المتاحة:
+            showPopup("تمت العملية بنجاح", 'info');
+            showPopup("تمت العملية بنجاح", 'success');
+            showPopup("تحذير: هذا الحقل مطلوب", 'warning');
+            showPopup("حدث خطأ غير متوقع", 'error');
+            */
+    </script>
+                      
+ 
+    <script>
+        let popupSettings = {
+            hideAll: false,
+            durations: {
+                info: 1000,
+                success: 1000,
+                warning: 1000,
+                error: 1000
+            },
+            hiddenTypes: {
+                info: false,
+                success: false,
+                warning: false,
+                error: false
+            }
+        };
+
+        // تحميل الإعدادات عند بدء التشغيل
+        function loadSettings() {
+            const savedSettings = localStorage.getItem('popupSettings');
+            if (savedSettings) {
+                try {
+                    const parsedSettings = JSON.parse(savedSettings);
+                    
+                    popupSettings = {
+                        hideAll: parsedSettings.hideAll !== undefined ? parsedSettings.hideAll : false,
+                        durations: {
+                            info: parsedSettings.durations?.info || 1000,
+                            success: parsedSettings.durations?.success || 1000,
+                            warning: parsedSettings.durations?.warning || 1000,
+                            error: parsedSettings.durations?.error || 1000
+                        },
+                        hiddenTypes: {
+                            info: parsedSettings.hiddenTypes?.info || false,
+                            success: parsedSettings.hiddenTypes?.success || false,
+                            warning: parsedSettings.hiddenTypes?.warning || false,
+                            error: parsedSettings.hiddenTypes?.error || false
+                        }
+                    };
+                    
+                    updateUIFromSettings();
+                    
+                } catch (e) {
+                    console.error('Failed to parse saved settings', e);
+                    saveSettingsToLocalStorage();
+                }
+            } else {
+                saveSettingsToLocalStorage();
+            }
+        }
+
+        // تحديث واجهة المستخدم من الإعدادات
+        function updateUIFromSettings() {
+            document.getElementById('durationInfo').value = popupSettings.durations.info;
+            document.getElementById('durationSuccess').value = popupSettings.durations.success;
+            document.getElementById('durationWarning').value = popupSettings.durations.warning;
+            document.getElementById('durationError').value = popupSettings.durations.error;
+            
+            document.getElementById('enableInfo').checked = popupSettings.hiddenTypes.info;
+            document.getElementById('enableSuccess').checked = popupSettings.hiddenTypes.success;
+            document.getElementById('enableWarning').checked = popupSettings.hiddenTypes.warning;
+            document.getElementById('enableError').checked = popupSettings.hiddenTypes.error;
+            
+            document.getElementById('popupEnabled').checked = popupSettings.hideAll;
+        }
+
+        // حفظ الإعدادات في التخزين المحلي
+        function saveSettingsToLocalStorage() {
+            localStorage.setItem('popupSettings', JSON.stringify(popupSettings));
+        }
+
+        function showPopup(message, type = 'info', customDuration = null, isSystemMessage = false) {
+            // إذا كانت رسالة نظامية، لا تطبق عليها قواعد الإخفاء
+            if (!isSystemMessage && (popupSettings.hideAll || popupSettings.hiddenTypes[type])) {
+                return;
+            }
+
+            const popup = document.getElementById('customPopup');
+            const overlay = document.getElementById('popupOverlay');
+            const icon = document.getElementById('popupIcon');
+            const msg = document.getElementById('popupMessage');
+
+            msg.textContent = message;
+            popup.className = 'popup ' + type;
+
+            const icons = {
+                'info': 'fas fa-info-circle info',
+                'warning': 'fas fa-exclamation-triangle warning',
+                'error': 'fas fa-times-circle error',
+                'success': 'fas fa-check-circle success'
+            };
+            icon.className = 'popup-icon ' + (icons[type] || icons['info']);
+
+            popup.classList.add('show');
+            overlay.classList.add('show');
+
+            const duration = customDuration !== null ? customDuration : popupSettings.durations[type] || 1000;
+setTimeout(() => {
+    // إخفاء الرسالة المنبثقة
+    document.getElementById('customPopup').classList.remove('show');
+    
+    // التحقق من حالة نافذة الإعدادات
+    const settingsPopup = document.getElementById('popupSettings');
+    const overlay = document.getElementById('popupOverlay');
+    
+    // إخفاء الخلفية فقط إذا كانت نافذة الإعدادات غير ظاهرة
+    if (!settingsPopup.classList.contains('show') && settingsPopup.style.display !== 'block') {
+        overlay.classList.remove('show');
+    }
+}, duration);
+        }
+
+        function openSettings() {
+            document.getElementById('popupSettings').classList.add('show');
+            document.getElementById('popupOverlay').classList.add('show');
+            loadSettings();
+        }
+
+        function closeSettings() {
+            document.getElementById('popupSettings').classList.remove('show');
+            document.getElementById('popupOverlay').classList.remove('show');
+        }
+
+        function saveSettings() {
+            popupSettings.durations.info = parseInt(document.getElementById('durationInfo').value) || 1000;
+            popupSettings.durations.success = parseInt(document.getElementById('durationSuccess').value) || 1000;
+            popupSettings.durations.warning = parseInt(document.getElementById('durationWarning').value) || 1000;
+            popupSettings.durations.error = parseInt(document.getElementById('durationError').value) || 1000;
+            
+            popupSettings.hiddenTypes.info = document.getElementById('enableInfo').checked;
+            popupSettings.hiddenTypes.success = document.getElementById('enableSuccess').checked;
+            popupSettings.hiddenTypes.warning = document.getElementById('enableWarning').checked;
+            popupSettings.hiddenTypes.error = document.getElementById('enableError').checked;
+            
+            popupSettings.hideAll = document.getElementById('popupEnabled').checked;
+
+            saveSettingsToLocalStorage();
+            showPopup("تم حفظ الإعدادات بنجاح", "success", 1000, true);
+            
+            setTimeout(closeSettings, 1000);
+            closeFloatingMenu();
+        }
+
+        function updateSettings(type) {
+            const checkbox = document.getElementById('enable' + capitalize(type));
+            const isChecked = checkbox.checked;
+            
+            popupSettings.hiddenTypes[type] = isChecked;
+            
+            updateHideAllCheckbox();
+            
+            saveSettingsToLocalStorage();
+            
+            const typeInArabic = getTypeInArabic(type);
+            const message = isChecked ? "تم تفعيل إخفاء رسائل " + typeInArabic : "تم إلغاء إخفاء رسائل " + typeInArabic;
+            showPopup(message, isChecked ? 'info' : type, 1000, true);
+        }
+
+        function toggleAllMessages() {
+            const isChecked = document.getElementById('popupEnabled').checked;
+            
+            // عرض الرسالة أولاً قبل تطبيق الإعدادات
+            const message = isChecked ? "تم تفعيل إخفاء كافة أنواع الرسائل" : "تم إلغاء إخفاء كافة أنواع الرسائل";
+            showPopup(message, isChecked ? 'info' : 'success', 1000, true);
+            
+            // تطبيق الإعدادات بعد عرض الرسالة
+            popupSettings.hideAll = isChecked;
+            
+            if (isChecked) {
+                popupSettings.hiddenTypes.info = true;
+                popupSettings.hiddenTypes.success = true;
+                popupSettings.hiddenTypes.warning = true;
+                popupSettings.hiddenTypes.error = true;
+            } else {
+                popupSettings.hiddenTypes.info = false;
+                popupSettings.hiddenTypes.success = false;
+                popupSettings.hiddenTypes.warning = false;
+                popupSettings.hiddenTypes.error = false;
+            }
+            
+            updateUIFromSettings();
+            saveSettingsToLocalStorage();
+        }
+
+        function updateHideAllCheckbox() {
+            const allChecked = popupSettings.hiddenTypes.info && 
+                              popupSettings.hiddenTypes.success && 
+                              popupSettings.hiddenTypes.warning && 
+                              popupSettings.hiddenTypes.error;
+            
+            document.getElementById('popupEnabled').checked = allChecked;
+            popupSettings.hideAll = allChecked;
+            
+            if (allChecked) {
+                showPopup("تم تفعيل إخفاء كافة أنواع الرسائل تلقائياً", "info", 1000, true);
+            }
+        }
+
+        function getTypeInArabic(type) {
+            const types = {
+                'info': 'المعلومات',
+                'success': 'النجاح',
+                'warning': 'التحذير',
+                'error': 'الخطأ'
+            };
+            return types[type] || type;
+        }
+
+        function capitalize(txt) {
+            return txt.charAt(0).toUpperCase() + txt.slice(1);
+        }
+
+        // تحميل الإعدادات عند بدء التشغيل
+        window.addEventListener('DOMContentLoaded', loadSettings);
+
+// إغلاق النافذة عند النقر خارجها
+document.addEventListener('click', function(event) {
+    const settingsPopup = document.getElementById('popupSettings');
+    const overlay = document.getElementById('popupOverlay');
+    
+    // تحقق مما إذا كانت النافذة ظاهرة (بأي طريقة عرض)
+    const isPopupVisible = settingsPopup.classList.contains('show') || 
+                         settingsPopup.style.display === 'block';
+    
+    // تحقق من النقر خارج النافذة وخارج أي عناصر متعلقة بها
+    if (isPopupVisible && 
+        !event.target.closest('#popupSettings') && 
+        !event.target.closest('[onclick*="openSettings"]') &&
+        event.target !== settingsPopup) {
+        
+        closeSettings();
+    }
+});
+   
+      
+      
+function openSettings() {
+document.getElementById("popupSettings").style.display = "block";
+  
+  setTimeout(function() {
+    document.getElementById("popupOverlay").classList.add("show");
+  }, 50);
+}
+
+function closeSettings() {
+  document.getElementById("popupSettings").style.display = "none";
+  document.getElementById("popupOverlay").classList.remove("show");
+}      
+    </script>               
+                      
+    <script>
+        // عناصر DOM
+        const mainButton = document.getElementById('mainButton');
+        const floatingMenu = document.getElementById('floatingMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        const overlay = document.getElementById('overlay');
+
+        // تبديل القائمة المنبثقة
+        mainButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+            floatingMenu.classList.toggle('active');
+            
+            if (floatingMenu.classList.contains('active')) {
+                // إظهار الخلفية المعتمة ومنع التمرير
+                overlay.style.display = 'block';
+                document.body.classList.add('body-no-scroll');
+                document.addEventListener('click', closeMenuOutside);
+            } else {
+                // إخفاء الخلفية المعتمة وتمكين التمرير
+                overlay.style.display = 'none';
+                document.body.classList.remove('body-no-scroll');
+                document.removeEventListener('click', closeMenuOutside);
+            }
+        });
+        
+        // إغلاق القائمة عند النقر على الزر المغلق
+        closeMenu.addEventListener('click', function() {
+            closeFloatingMenu();
+        });
+        
+function closeMenuOutside(e) {
+    const settingsPopup = document.getElementById('popupSettings');
+    const videoModal = document.getElementById('videoModal');
+    
+    const isSettingsVisible = settingsPopup.classList.contains('show') || 
+                            settingsPopup.style.display === 'block';
+    
+    const isVideoVisible = videoModal.style.display === 'block' || 
+                         getComputedStyle(videoModal).display === 'block';
+
+    // حالة خاصة: إذا كانت نافذة الفيديو ظاهرة، أغلق القائمة فوراً
+    if (isVideoVisible) {
+        closeFloatingMenu();
+        return; // نخرج من الدالة فوراً بعد الإغلاق
+    }
+    
+    // الحالة العامة: لا تغلق القائمة إذا كانت نافذة الإعدادات ظاهرة
+    if (!isSettingsVisible && !floatingMenu.contains(e.target) && e.target !== mainButton) {
+        closeFloatingMenu();
+    }
+}
+        
+        function closeFloatingMenu() {
+            mainButton.classList.remove('active');
+            floatingMenu.classList.remove('active');
+            overlay.style.display = 'none';
+            document.body.classList.remove('body-no-scroll');
+            document.removeEventListener('click', closeMenuOutside);
+        }
+
+
+        // إزالة تأثير النبض بعد 5 ثواني
+        setTimeout(() => {
+            mainButton.classList.remove('pulse');
+        }, 5000);
+
+document.addEventListener("DOMContentLoaded", function () {
+    showFloatingText(); // استدعاء الدالة عند تحميل الصفحة
+
+    // تكرار إظهار النص العائم كل 30 ثانية
+    setInterval(function() {
+        showFloatingText();
+    }, 30000);
+});
+
+// دالة لإظهار النص العائم
+function showFloatingText() {
+    var floatingText = document.getElementById("floatingText");
+    floatingText.style.display = "block";
+
+    // إخفاء النص العائم بعد 5 ثواني
+    setTimeout(function() {
+        floatingText.style.display = "none";
+    }, 5000);
+}    
+ </script>                      
+
+
+<script>
+
+window.onload = function() {
+    clearFields();
+};
+
+function clearFields() {
+    document.getElementById('amount').value = '';
+    document.getElementById('tax-period').value = '';
+    document.getElementById('notice-date').value = '';
+    document.getElementById('result').innerHTML = '';
+    document.getElementById('error').textContent = '';
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('error').style.display = 'none';
+
+    // التعامل مع endDate حسب تفعيل التعيين التلقائي
+    const autoDateEnabled = localStorage.getItem('autoSetTodayDate') === 'true';
+    const paymentdateInput = document.getElementById("payment-date");
+    if (paymentdateInput) {
+        if (!autoDateEnabled) {
+            paymentdateInput.value = '';
+        }
+        // إذا كان مفعلًا: لا تفرغ ولا تعمل فوكس
+    }
+
+    // نقل التركيز إلى عنصر الفترة الضريبية
+    const taxPeriodInput = document.getElementById('tax-period');
+    if (taxPeriodInput) {
+        taxPeriodInput.focus();
+    }
+}
+
+
+function calculateFine() {
+    const amount = document.getElementById('amount').value;
+    const taxPeriod = document.getElementById('tax-period').value;
+    const noticeDate = document.getElementById('notice-date').value;
+    const paymentDate = document.getElementById('payment-date').value;
+    const resultDiv = document.getElementById('result');
+
+    resultDiv.innerHTML = '';
+    resultDiv.style.display = 'none';
+
+    if (!taxPeriod) {
+        showPopup("يرجى إدخال الفترة الضريبية.", 'error');
+        document.getElementById('tax-period').focus();
+        return;
+    }
+    if (!amount) {
+        showPopup("يرجى إدخال المبلغ.", 'error');
+        document.getElementById('amount').focus();
+        return;
+    }
+    if (!noticeDate) {
+        showPopup("يرجى إدخال تاريخ الإخطار من المأمورية.", 'error');
+        document.getElementById('notice-date').focus();
+        return;
+    }
+    if (!paymentDate) {
+        showPopup("يرجى إدخال تاريخ السداد.", 'error');
+        document.getElementById('payment-date').focus();
+        return;
+    }
+
+    const amountValue = parseFloat(amount);
+
+    function parseDate(dateStr) {
+        const parts = dateStr.split('/');
+        return new Date(parts[2], parts[1] - 1, parts[0]);
+    }
+
+    function formatDate(date) {
+        const dd = String(date.getDate()).padStart(2, '0');
+        const mm = String(date.getMonth() + 1).padStart(2, '0');
+        const yyyy = date.getFullYear();
+        return `${dd}/${mm}/${yyyy}`;
+    }
+
+    const taxPeriodDate = parseDate(taxPeriod);
+    const noticeDateDate = parseDate(noticeDate);
+    const paymentDateDate = parseDate(paymentDate);
+    const vatStartDate = new Date('2016-08-31');
+
+    if (taxPeriodDate < vatStartDate) {
+        showPopup("تاريخ الفترة قبل بدء تطبيق ضريبة القيمة المضافة (تاريخ الحساب يبدأ من 1 سبتمبر 2016).", 'error');
+        return;
+    }
+
+    if (taxPeriodDate > noticeDateDate || taxPeriodDate.getTime() === noticeDateDate.getTime()) {
+        showPopup("تاريخ الإخطار قبل انتهاء فترة دفع الضريبة.", 'error');
+        return;
+    }
+
+    const monthsDiff = (noticeDateDate.getFullYear() - taxPeriodDate.getFullYear()) * 12 + (noticeDateDate.getMonth() - taxPeriodDate.getMonth());
+
+    if ((taxPeriodDate.getFullYear() <= 2020 && monthsDiff < 3) ||
+        (taxPeriodDate.getFullYear() > 2020 && monthsDiff < 2)) {
+        showPopup("تاريخ الإخطار قبل انتهاء فترة دفع الضريبة.", 'error');
+        return;
+    }
+
+    const oneDay = 24 * 60 * 60 * 1000;
+    const threeYearsInMonths = 36;
+    const monthlyRate = 1.5 / 100;
+
+    function addMonths(date, months) {
+        const d = new Date(date);
+        d.setMonth(d.getMonth() + months);
+        return d;
+    }
+
+    const startCalculationDate = addMonths(taxPeriodDate, taxPeriodDate.getFullYear() >= 2021 ? 2 : 3);
+    startCalculationDate.setDate(1); // أول يوم من الشهر
+
+    // ✅ احتساب عدد الشهور مع كسر الشهر يُحسب شهر
+    function countFullMonthsWithFraction(start, end) {
+        let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+        if (end.getDate() > start.getDate()) {
+            months++; // كسر الشهر يُحسب شهر
+        } else if (end.getDate() === start.getDate()) {
+            // لا نضيف شيء
+        } else {
+            months++; // حتى لو أقل، نعتبرها شهر كامل
+        }
+        return Math.max(0, months);
+    }
+
+    const firstPeriodMonths = Math.min(countFullMonthsWithFraction(startCalculationDate, noticeDateDate), threeYearsInMonths);
+    const firstPeriodFine = amountValue * monthlyRate * firstPeriodMonths;
+
+    const secondPeriodMonths = countFullMonthsWithFraction(noticeDateDate, paymentDateDate);
+    const secondPeriodFine = amountValue * monthlyRate * secondPeriodMonths;
+
+    const totalFine = firstPeriodFine + secondPeriodFine;
+
+    resultDiv.innerHTML = `
+        <p1>1.5% عن كل شهر بحد أقصى 36 شهر (3 سنوات)</p1>
+        <p>بداية الحساب : ${formatDate(startCalculationDate)}</p>        
+        <p>تاريخ الإخطار : ${formatDate(noticeDateDate)}</p>
+        <p>عدد الشهور : ${firstPeriodMonths}</p>
+        <p id="firstPeriodFine">الغرامة : ${firstPeriodFine.toFixed(2)} جنية</p>        
+        <hr>
+    `;
+
+    if (noticeDateDate.getTime() !== paymentDateDate.getTime()) {
+        resultDiv.innerHTML += `
+            <p1>1.5% عن كل شهر حتى تاريخ السداد</p1>
+            <p>تاريخ الإخطار : ${formatDate(noticeDateDate)}</p>        
+            <p>تاريخ السداد : ${formatDate(paymentDateDate)}</p>
+            <p>عدد الشهور : ${secondPeriodMonths}</p>
+            <p id="secondPeriodFine">الغرامة : ${secondPeriodFine.toFixed(2)} جنية</p>            
+            <hr>
+        `;
+    }
+
+    resultDiv.innerHTML += `<p2>إجمالي الغرامة : ${totalFine.toFixed(0)} جنية</p2>`;
+
+    showPopup(`تم إحتساب فروق فحص ضريبة القيمة المضافة بنجاح.`, 'success');
+  
+    setTimeout(function() {
+    showPopup(`إجمالي الغرامة المستحقة ${totalFine.toFixed(0)} جنية`, 'info');
+    }, 1000);
+  
+    const savedColor = localStorage.getItem('taxHighlightColor') || '';
+    applyHighlightColor(savedColor);
+
+    resultDiv.style.display = resultDiv.innerHTML.trim() ? 'block' : 'none';
+}
+
+ </script>  
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script>
+    $(document).ready(function() {
+        // تحديد تنسيق التاريخ
+        $.datepicker.setDefaults({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true, // تمكين تغيير الشهر
+            changeYear: true,  // تمكين تغيير السنة
+            yearRange: '2016:2025', // تحديد الحد الأدنى والأقصى للسنة
+            defaultDate: new Date(), // تحديد التاريخ الافتراضي ليكون تاريخ اليوم
+            monthNames: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+            monthNamesShort: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+            beforeShow: function(input, inst) {
+                setTimeout(function() {
+                    $(input).prop('readOnly', true); // تعيين الخاصية readOnly عند فتح التقويم
+                }, 0);
+            },
+            onClose: function(dateText, inst) {
+                $(this).prop('readOnly', false); // إعادة تفعيل الإدخال بعد إغلاق التقويم
+            }
+        });
+
+        // تفعيل تقويم التاريخ
+        $('#tax-period, #notice-date, #payment-date').datepicker();
+    });
+</script>
+
+
+                      
+    <script>
+
+// تبديل الوضع الليلي
+function toggleNightMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    const nightModeToggle = document.querySelector('.night-mode-toggle');
+    const isNightMode = body.classList.contains('dark-mode');
+    nightModeToggle.innerHTML = isNightMode ? '☀' : '🌙';
+}
+// تحميل تفضيل العرض المحفوظ والوضع الليلي
+document.addEventListener('DOMContentLoaded', function() {
+    const darkModePreference = localStorage.getItem('darkModePreference'); // إضافة تفضيل الوضع الليلي
+    // تطبيق الوضع الليلي إذا كان مفعلاً
+    if (darkModePreference === 'true') {
+        toggleNightMode();
+    }
+});
+
+// تبديل الوضع الليلي
+function toggleNightMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    const nightModeToggle = document.querySelector('.night-mode-toggle');
+    const isNightMode = body.classList.contains('dark-mode');
+    nightModeToggle.innerHTML = isNightMode ? '☀' : '🌙';
+    // حفظ تفضيل الوضع الليلي
+    localStorage.setItem('darkModePreference', isNightMode ? 'true' : 'false');
+}     
+
+
+       // إظهار النص العائم عند تحميل الصفحة
+        window.onload = function() {
+            showFloatingText(); // استدعاء الدالة لأول مرة عند تحميل الصفحة
+
+            // تكرار إظهار النص العائم كل 30 ثانية
+            setInterval(function() {
+                showFloatingText();
+            }, 30000);
+        };
+
+        // دالة لإظهار النص العائم
+        function showFloatingText() {
+            var floatingText = document.getElementById("floatingText");
+            floatingText.style.display = "block";
+
+            // إخفاء النص العائم بعد 5 ثواني
+            setTimeout(function() {
+                floatingText.style.display = "none";
+            }, 5000);
+        }
+
+      
+      // إعادة توجيه المستخدم عند الضغط على الأيقونة العائمة
+        document.getElementById("youtubeIcon").onclick = function() {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.mrizk.taxlawapp";
+        };
+      
+      
+  </script>                    
+                  
+       <script>  
+ // لتغيير اتجاه الصفحة من اليسار إلى اليمين  (RTL)
+document.dir = 'rtl';
+       </script> 
+      
+<script> 
+// الجزء الثابت من معرف الزيارة
+const expectedVisitIDPrefix = 'Tax Law App | ';
+
+// قائمة بالمعرفات المسموح بها
+const allowedVisitIDs = [
+    'Tax Law App | 24911910LTLA541',
+    'Tax Law App | 24771910YTLA338'
+  
+    // أضف المزيد من المعرفات المسموح بها هنا
+];
+
+// التحقق من معرف الزيارة المخزن في التخزين المحلي
+function checkStoredVisitID() {
+    const storedVisitID = localStorage.getItem('visitID');
+    const expiryTimestamp = localStorage.getItem('visitIDExpiry');
+    const freeAccessPressed = localStorage.getItem(getFreeAccessKey());
+    const freeAccessBtn = document.getElementById('freeAccessBtn');
+
+    // الحصول على الوقت الحالي
+    const currentTime = new Date().getTime();
+
+    // إذا كان هناك معرف مخزن وصلاحيته لم تنتهِ، اظهار المحتوى
+    if (storedVisitID && expiryTimestamp && currentTime < expiryTimestamp) {
+        document.getElementById('pageContent').style.display = 'block';
+        document.getElementById('visitPrompt').style.display = 'none';
+    } else {
+        // إظهار نافذة الإدخال
+        document.getElementById('visitPrompt').style.display = 'block';
+    }
+
+    // إذا تم الضغط على زر الدخول المجاني من قبل لهذه الصفحة، قم بتعطيله
+    if (freeAccessPressed === 'true') {
+        freeAccessBtn.classList.add('disabled');
+        freeAccessBtn.disabled = true;
+
+        // إضافة تلميح يظهر عند التمرير على الزر
+        freeAccessBtn.title = "تم الدخول مجانا من قبل .. يمكنك التواصل مع مطور التطبيق واتساب : 01030069322 لطلب معرف جديد";
+    }
+}
+
+// توليد مفتاح فريد لكل صفحة بناءً على نص h2
+function getFreeAccessKey() {
+    const pageName = document.querySelector('h2').innerText.trim(); // الحصول على نص h2
+    return `freeAccessPressed_${pageName}`; // مفتاح مميز لكل صفحة
+}
+
+// الدخول لأول مرة (مجاناً)
+function firstFreeAccess() {
+    // إظهار المحتوى
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('visitPrompt').style.display = 'none';
+    document.getElementById('pageContent').style.display = 'block';
+
+    // تعطيل الزر بعد الدخول لأول مرة
+    const freeAccessBtn = document.getElementById('freeAccessBtn');
+    freeAccessBtn.classList.add('disabled');
+    freeAccessBtn.disabled = true;
+
+    // تخزين حالة الضغط على الزر في التخزين المحلي مع مفتاح فريد لكل صفحة
+    localStorage.setItem(getFreeAccessKey(), 'true');
+
+    // إخفاء المحتوى بعد 5 دقائق وإعادة إظهار نافذة الإدخال
+    setTimeout(() => {
+        document.getElementById('pageContent').style.display = 'none';
+        document.getElementById('visitPrompt').style.display = 'block';
+    }, 300000); // 300 ثانية (5 دقائق)
+}
+
+// التحقق من معرف الزيارة المدخل
+function checkVisitID() {
+    const inputID = document.getElementById('visitIDInput').value.trim(); 
+    const messageDiv = document.getElementById('message'); 
+    const contactMessageDiv = document.getElementById('contactMessage'); 
+
+    // إذا كان الحقل فارغًا
+    if (inputID === '') {
+        messageDiv.textContent = 'يرجي إدخال معرف الزيارة الخاص بك.'; 
+        document.getElementById('visitIDInput').focus(); 
+        return; 
+    }
+
+    // الحصول على التاريخ الحالي
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0'); 
+    const month = String(today.getMonth() + 1).padStart(2, '0'); 
+
+    // التحقق من الجزء الأول
+    if (!inputID.startsWith(expectedVisitIDPrefix)) {
+        messageDiv.textContent = 'عفوا معرف الزيارة الخاص بك غير صحيح .. الرجاء التواصل مع مطور التطبيق واتساب رقم :';
+        contactMessageDiv.innerHTML = '<span class="whatsapp-link" onclick="openWhatsApp()">01030069322 | إنقر هنا</span>';
+        return;
+    }
+
+    // الحصول على الجزء الثاني من المعرف
+    const visitIDPart = inputID.slice(expectedVisitIDPrefix.length);
+
+    // بناء التعبير المنتظم للتحقق من الشروط
+    const regex = new RegExp(`^24\\d{2}${day}${month}[A-Z]TLA\\d{3}$`);
+
+    // التحقق من الجزء الثاني باستخدام التعبير المنتظم
+    if (regex.test(visitIDPart)) {
+        // التحقق مما إذا كان المعرف موجودًا في قائمة المسموح بها
+        if (allowedVisitIDs.includes(inputID)) {
+            // التحقق مما إذا كان المعرف مطابقًا للمعرف المخزن
+            const storedVisitID = localStorage.getItem('visitID');
+            if (storedVisitID && storedVisitID === inputID) {
+                messageDiv.textContent = 'عفوا إنتهت صلاحية معرف الزيارة الخاص بك | لطلب معرف جديد الرجاء التواصل مع مطورالتطبيق واتساب رقم :';
+                contactMessageDiv.innerHTML = '<span class="whatsapp-link" onclick="openWhatsApp()">01030069322 | إنقر هنا</span>';
+                return;
+            } else {
+                // إذا كان المعرف مختلفًا، تخزينه وإظهار المحتوى
+                localStorage.setItem('visitID', inputID); 
+                localStorage.setItem('visitIDExpiry', new Date().getTime() + 86400000); // 24 ساعة
+
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('visitPrompt').style.display = 'none';
+                document.getElementById('pageContent').style.display = 'block';
+
+                // إفراغ حقل إدخال معرف الزيارة
+                document.getElementById('visitIDInput').value = '';
+
+        // إخفاء المحتوى بعد 24 ساعة وإعادة إظهار نافذة الإدخال
+        setTimeout(() => {
+        document.getElementById('pageContent').style.display = 'none';
+        document.getElementById('visitPrompt').style.display = 'block';
+        }, 86400000); // 24 ساعة
+      }
+        } else {
+            messageDiv.textContent = 'عفوا معرف الزيارة الخاص بك غير مسموح به .. الرجاء التواصل مع مطور التطبيق واتساب رقم :';
+        contactMessageDiv.innerHTML = '<span class="whatsapp-link" onclick="openWhatsApp()">01030069322 | إنقر هنا</span>';
+        }
+    } else {
+        messageDiv.textContent = 'عفوا معرف الزيارة الخاص بك غير صحيح .. الرجاء التواصل مع مطور التطبيق واتساب رقم :';
+        contactMessageDiv.innerHTML = '<span class="whatsapp-link" onclick="openWhatsApp()">01030069322 | إنقر هنا</span>';
+    }
+}
+
+// لصق المعرف من الحافظة
+function pasteVisitID() {
+    navigator.clipboard.readText().then(text => {
+        document.getElementById('visitIDInput').value = text; 
+    });
+}
+
+// إفراغ حقل الإدخال
+function clearVisitID() {
+    document.getElementById('visitIDInput').value = ''; 
+    document.getElementById('message').textContent = ''; 
+    document.getElementById('contactMessage').innerHTML = ''; 
+}
+
+// فتح واتساب مع الرسالة المحددة
+function openWhatsApp() {
+    const visitID = document.getElementById('visitIDInput').value.trim();
+    const message = `السلام عليكم ورحمة الله وبركاته .. أنا أستخدم تطبيق Tax Law App إستفساري بخصوص طلب معرف الزيارة الخاص بي لشاشة | ${document.querySelector('h2').innerText} | تكلفة المعرف لمرة واحدة ( يوم كامل 24 ساعة ) : 50 جنية معلومات الدفع : يتم دفع تكلفة المعرف إما من خلال 1- محفظة ڤودافون كاش علي الرقم التالي : ( 01030069322 ) 2- تطبيق إنستا باي علي عنوان الدفع التالي : ( mahmoudrizk16@instapay ) 3- أي تطبيق بنكي آخر محافظ إلكترونية وحسابات علي الرقم التالي : ( 01030069322 ) وإرسال صورة إيصال الدفع لتوليد معرف الزيارة الخاص بك | يرجي العلم أن صلاحية معرف الزيارة 24 ساعة فقط ولن يتم توليد المعرف إلا من خلال صورة إيصال الدفع الخاص بك.`;
+    const whatsappMessage = encodeURIComponent(message); // ترميز الرسالة
+    const whatsappURL = `https://wa.me/201030069322?text=${whatsappMessage}`; // إدخال الرقم مباشرة
+
+    // فتح نافذة واتساب في نافذة جديدة
+    var whatsappWindow = window.open(whatsappURL, '_blank');
+
+    // تأخير إغلاق مربع الحوار وتفريغ حقل الإدخال لضمان فتح نافذة واتساب أولاً
+    setTimeout(() => {
+        // إفراغ حقل إدخال المعرف
+        document.getElementById('visitIDInput').value = ''; 
+        document.getElementById('message').textContent = ''; 
+        document.getElementById('contactMessage').innerHTML = ''; 
+    }, 1000); // 1 ثانية
+}
+
+// عند تحميل الصفحة
+window.onload = () => {
+    checkStoredVisitID(); // التحقق من معرف الزيارة المخزن
+};   
+  
+  
+// التحقق من التخزين المحلي عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+    checkStoredVisitID();
+  
+    // قراءة بيانات المستخدم من localStorage
+    const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (user) {
+        // الحصول على التاريخ والوقت الحاليين
+        const now = new Date();
+        const currentDate = new Date();
+        const expiryDateParts = user.expiryDate.split('/');
+        const expiryDate = new Date(expiryDateParts[2], expiryDateParts[1] - 1, expiryDateParts[0]);
+        const timeDiff = expiryDate - currentDate;
+        let daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+        // إذا كانت الفترة المتبقية فارغة أو أقل من أو تساوي صفر، تعيينها إلى صفر
+        if (isNaN(daysDiff) || daysDiff <= 0) {
+            daysDiff = 0;
+        }
+
+        // عرض اسم المستخدم والفترة المتبقية
+        document.getElementById('usernameDisplay').innerHTML = `
+            <p><i class="fas fa-user"></i> المستخدم الحالي : ${user.fullName}</p>
+            <p><i class="fas fa-hourglass-half"></i> الفترة المتبقية : ${daysDiff} يوم</p>
+        `;
+
+        // إذا كانت الفترة المتبقية أكبر من الصفر، إخفاء نافذة إدخال المعرف       
+       if (daysDiff > 0) {
+            setTimeout(() => {
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('visitPrompt').style.display = 'none';
+                document.getElementById('pageContent').style.display = 'block';
+            }, 500); // الانتظار لمدة 500 ملي ثانية قبل إخفاء النافذة
+        } else {
+            // إذا كانت الفترة أقل من أو تساوي صفر، إظهار نافذة إدخال المعرف
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('visitPrompt').style.display = 'block';
+        }
+    } else {
+        // إذا كانت بيانات المستخدم فارغة، إظهار نافذة إدخال المعرف
+        //document.getElementById('overlay').style.display = 'block';
+        document.getElementById('visitPrompt').style.display = 'block';
+    }
+}); 
+</script>
+
+
+<script>
+function clickIE4() {
+    if (2 == event.button) {
+        return false;
+    }
+}
+
+function clickNS4(e) {
+    if ((document.layers || (document.getElementById && !document.all)) && (2 == e.which || 3 == e.which)) {
+        return false;
+    }
+}
+
+document.oncontextmenu = function () {
+    return false;
+};
+
+document.onkeydown = function (e) {
+    if (
+        123 == e.keyCode ||
+        (e.ctrlKey && 73 == e.keyCode) ||
+        (e.ctrlKey && 67 == e.keyCode) ||
+        (e.ctrlKey && 74 == e.keyCode) ||
+        (e.ctrlKey && 80 == e.keyCode) ||
+        (e.ctrlKey && 85 == e.keyCode) ||
+        (e.ctrlKey && 83 == e.keyCode)
+    ) {
+        return false;
+    }
+};
+</script> 
